@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension EditStudentViewController {
 	class ViewModel {
 		private var student: Student
@@ -54,7 +55,58 @@ extension EditStudentViewController {
 									  Student.GradeLevel.seventh.rawValue,
 									  Student.GradeLevel.eighth.rawValue,
 									  Student.GradeLevel.advanced.rawValue]
+		/// Photo
+		var image: UIImage? {
+			get {
+				return student.image
+			}
+			set {
+				student.image = newValue
+			}
+		}
+		/// parent contacts
+		var contactName: String {
+			get {
+				return student.contact.name
+			}
+			set {
+				student.contact.name = newValue
+			}
+		}
 
+		var contactRelation: ParentContact.Relationship {
+			get {
+				return student.contact.relation
+			}
+			set {
+				student.contact.relation = newValue
+			}
+		}
+
+		var contactEmail: String {
+			get {
+				return student.contact.email
+			}
+			set {
+				student.contact.email = newValue
+			}
+		}
+
+		var contactPhone: String {
+			get {
+				guard let phone = student.contact.phones.first else { return "" }
+
+				return phone
+			}
+			set {
+				if student.contact.phones.count <= 1 {
+					student.contact.phones = [newValue]
+				} else {
+					let array = student.contact.phones[1...(student.contact.phones.count-1)]
+					student.contact.phones = [newValue] + array
+				}
+			}
+		}
 
 		init(student: Student) {
 			self.student =  student

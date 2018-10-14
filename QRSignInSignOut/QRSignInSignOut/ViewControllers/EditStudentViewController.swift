@@ -8,7 +8,7 @@
 
 import UIKit
 import Eureka
-
+import ImageRow
 class EditStudentViewController: FormViewController {
 	var viewModel: ViewModel?
 	var vmFactory: ViewModelFactory
@@ -39,6 +39,12 @@ class EditStudentViewController: FormViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		ImageRow.defaultCellUpdate = { cell, row in
+			cell.accessoryView?.layer.cornerRadius = 36
+			cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 72, height: 72)
+		}
+
 		// Enables the navigation accessory and stops navigation when a disabled row is encountered
 		navigationOptions = RowNavigationOptions.Enabled.union(.StopDisabledRow)
 		// Enables smooth scrolling on navigation to off-screen rows
@@ -57,6 +63,7 @@ class EditStudentViewController: FormViewController {
 
 	private func buildForm(_ viewModel: ViewModel) {
 		form
+			// MARK: Students
 			+++ Section()
 			<<< TextRow() {
 				$0.title = "First"
@@ -111,14 +118,83 @@ class EditStudentViewController: FormViewController {
 					}
 				}
 			}
+			// MARK: Contacts
+			+++ Section("Parents/Contacts")
+			<<< NameRow() {
+				$0.title = "Name"
+				$0.placeholder = "First Last"
+				$0.value = viewModel.contactName
+				$0.onChange { row in
+					if let value = row.value {
+						viewModel.contactName = value
+					}
+				}
+			}
 
-//			+++ Section("Parents/Contacts")
-//			<<< NameRow() {
-//				$0.title = "Name"
-//				$0.placeholder = "Last, First"
-//				$0.value = viewModel.last
-//
-//			}
+			<<< PickerInlineRow<ParentContact.Relationship>("Relation") { (row : PickerInlineRow<ParentContact.Relationship>) -> Void in
+				row.title = row.tag
+				row.displayValueFor = { (rowValue: ParentContact.Relationship?) in
+					return rowValue.map { $0.description }
+				}
+				row.options = [ParentContact.Relationship.father,
+							   ParentContact.Relationship.mother,
+							   ParentContact.Relationship.grandfather,
+							   ParentContact.Relationship.grandmother]
+				row.value = viewModel.contactRelation
+				row.onChange { row in
+					viewModel.contactRelation = row.value ?? .other("")
+				}
+			}
 
+			<<< EmailRow() {
+					$0.title = "Email"
+					$0.value = viewModel.contactEmail
+//					$0.add(rule: RuleRequired())
+					$0.add(rule: RuleEmail())
+					$0.validationOptions = .validatesOnChangeAfterBlurred
+					$0.onChange { row in
+						if let value = row.value {
+							viewModel.contactEmail = value
+						}
+					}
+				}
+				.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+				.onRowValidationChanged { cell, row in
+					let rowIndex = row.indexPath!.row
+					while row.section!.count > rowIndex + 1 && row.section?[rowIndex  + 1] is LabelRow {
+						row.section?.remove(at: rowIndex + 1)
+					}
+					if !row.isValid {
+						for (index, validationMsg) in row.validationErrors.map({ $0.msg }).enumerated() {
+							let labelRow = LabelRow() {
+								$0.title = validationMsg
+								$0.cell.height = { 30 }
+							}
+							row.section?.insert(labelRow, at: row.indexPath!.row + index + 1)
+						}
+					}
+				}
+
+			<<< PhoneRow() {
+				$0.title = "Mobile Phone Number"
+				$0.value = viewModel.contactPhone
+				$0.onChange({ (row) in
+					if let value = row.value {
+						viewModel.contactPhone = value
+					}
+				})
+			}
+
+			+++ ImageRow() {
+				$0.title = "Photo"
+				$0.value = viewModel.image
+				$0.onChange({ (row) in
+					viewModel.image = row.value
+				})
+		}
 	}
 }

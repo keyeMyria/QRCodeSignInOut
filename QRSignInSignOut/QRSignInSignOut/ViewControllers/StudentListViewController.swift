@@ -15,8 +15,14 @@ class StudentListViewController: UITableViewController {
 	var viewModel = ViewModel()
 
 	override func viewDidLoad() {
+
+		/// Selector syntax sugar is cool 👍
+		self.navigationItem.rightBarButtonItem?.action = .addButtonPressed
+		self.navigationItem.rightBarButtonItem?.target = self
 		let students = DataManager.shared.student?.allItems() ?? [Student]()
 		viewModel = ViewModel(students: students)
+
+
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +32,8 @@ class StudentListViewController: UITableViewController {
 
 	// MARK: - actions
 	@objc fileprivate func addButtonPressed(_ sender: UIBarButtonItem) {
-
+		let urlString = NavigationMap.urlString(withPatter: "student/create")
+		navigator.push(urlString)
 	}
 }
 extension Selector {

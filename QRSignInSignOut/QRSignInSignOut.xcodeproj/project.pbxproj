@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		280F432321F71EB37EC1E747 /* Pods_QRSignInSignOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BE46C1B6331BEB326A7A75 /* Pods_QRSignInSignOut.framework */; };
 		780DADD5216691D700078CB6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADD4216691D700078CB6 /* Notifications.swift */; };
 		780DADD82166B21800078CB6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADD72166B21800078CB6 /* DataStore.swift */; };
 		780DADDA216937E100078CB6 /* EditStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADD9216937E100078CB6 /* EditStudentViewController.swift */; };
@@ -25,6 +24,7 @@
 		786C3FEF2156BCC500D63556 /* QRSignInSignOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C3FEE2156BCC500D63556 /* QRSignInSignOutTests.swift */; };
 		786C3FFF2156C06500D63556 /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C3FFE2156C06500D63556 /* NavigationMap.swift */; };
 		786C40022156C0EC00D63556 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C40012156C0EC00D63556 /* MainMenuController.swift */; };
+		973A96DCC4FA77FF38CF473F /* Pods_QRSignInSignOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846946CD3EA6C28AE5F7C1BB /* Pods_QRSignInSignOut.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		13C4C3D540479A17DE854C92 /* Pods-QRSignInSignOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRSignInSignOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut.release.xcconfig"; sourceTree = "<group>"; };
-		42BE46C1B6331BEB326A7A75 /* Pods_QRSignInSignOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRSignInSignOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780DADD4216691D700078CB6 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		780DADD72166B21800078CB6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		780DADD9216937E100078CB6 /* EditStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		786C3FF02156BCC500D63556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786C3FFE2156C06500D63556 /* NavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
 		786C40012156C0EC00D63556 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		846946CD3EA6C28AE5F7C1BB /* Pods_QRSignInSignOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRSignInSignOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33E2335B371F4AE925D670D /* Pods-QRSignInSignOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRSignInSignOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F432321F71EB37EC1E747 /* Pods_QRSignInSignOut.framework in Frameworks */,
+				973A96DCC4FA77FF38CF473F /* Pods_QRSignInSignOut.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +100,13 @@
 				780DAE012171196D00078CB6 /* Result.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		780DAE032173A4FA00078CB6 /* Custom Eureka Row and Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Eureka Row and Cell";
 			sourceTree = "<group>";
 		};
 		7848FB6D215C34110076FD8A /* View Models */ = {
@@ -150,6 +157,7 @@
 		786C3FD82156BCC300D63556 /* QRSignInSignOut */ = {
 			isa = PBXGroup;
 			children = (
+				780DAE032173A4FA00078CB6 /* Custom Eureka Row and Cell */,
 				780DADD3216691AE00078CB6 /* Supports */,
 				7848FB73215C40910076FD8A /* Views */,
 				7848FB70215C352C0076FD8A /* Model */,
@@ -196,7 +204,7 @@
 		A2A63F4308F6CDEBCC0B59D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42BE46C1B6331BEB326A7A75 /* Pods_QRSignInSignOut.framework */,
+				846946CD3EA6C28AE5F7C1BB /* Pods_QRSignInSignOut.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,7 +220,7 @@
 				786C3FD22156BCC300D63556 /* Sources */,
 				786C3FD32156BCC300D63556 /* Frameworks */,
 				786C3FD42156BCC300D63556 /* Resources */,
-				B0C5CD8A1F40C8F4DF344AE3 /* [CP] Embed Pods Frameworks */,
+				983920B65175C435D6469CFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,7 +330,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0C5CD8A1F40C8F4DF344AE3 /* [CP] Embed Pods Frameworks */ = {
+		983920B65175C435D6469CFC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,6 +340,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageRow/ImageRow.framework",
 				"${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -339,6 +348,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageRow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLNavigator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

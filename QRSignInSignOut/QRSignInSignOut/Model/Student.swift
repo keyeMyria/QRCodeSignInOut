@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 enum Sex: String, Codable {
 	case male
@@ -42,11 +42,14 @@ struct PersonName: Equatable {
 
 class ParentContact {
 	var name: String = ""
-	var mobile: String = ""
+	//var mobile: String = ""
+	var phones = [String]()
+	var email: String = ""
+	var relation = Relationship.other("unknown")
 }
 
 extension ParentContact {
-	enum Relationship: CustomStringConvertible {
+	enum Relationship: CustomStringConvertible, Equatable {
 		case father
 		case mother
 		case grandfather
@@ -67,6 +70,24 @@ extension ParentContact {
 				return relative
 			}
 		}
+
+		init(_ string: String) {
+			if string == "Father" {
+				self = .father
+			} else if string == "Mother" {
+				self = .mother
+			} else if string == "Grandfather" {
+				self = .grandfather
+			} else if string == "Grandmother" {
+				self = .grandmother
+			} else {
+				self = .other(string)
+			}
+		}
+
+		static func == (lhs: Relationship, rhs: Relationship) -> Bool {
+			return lhs.description == rhs.description
+		}
 	}
 }
 
@@ -76,7 +97,8 @@ class Student: Model {
 	var level: GradeLevel
 	var pinCode: String = ""
 	var sex: Sex = .unknown
-
+	var contact = ParentContact()
+	var image: UIImage?
 	init(firstName first: String,
 		 lastName last: String,
 		 level: GradeLevel = .junior) {

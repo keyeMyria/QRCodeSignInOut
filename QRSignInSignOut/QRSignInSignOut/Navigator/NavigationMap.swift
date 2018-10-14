@@ -37,6 +37,13 @@ struct NavigationMap {
 			})
 		}
 
+		navigator.register(urlString(withPatter: "student/create/")) { (url, values, context) -> UIViewController? in
+			return EditStudentViewController(viewModelFactory: { ( then: @escaping (Any) -> Void) in
+				let vm = EditStudentViewController.ViewModel(student: Student(firstName: "", lastName: ""))
+				then(vm)
+			})
+		}
+
 		navigator.register("http://<path:_>", self.webViewControllerFactory)
 		navigator.register("https://<path:_>", self.webViewControllerFactory)
 
