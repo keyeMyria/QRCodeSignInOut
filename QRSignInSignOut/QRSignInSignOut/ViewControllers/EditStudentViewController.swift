@@ -51,14 +51,53 @@ class EditStudentViewController: FormViewController {
 		animateScroll = true
 		// Leaves 20pt of space between the keyboard and the highlighted row after scrolling to an off screen row
 		rowKeyboardSpacing = 20
-		
+
+
 		vmFactory { vm in
 			if let vm = vm as? ViewModel {
 				self.viewModel = vm
+				self.updateNavigatorBar()
 				self.buildForm(vm)
 			}
 		}
+	}
 
+	private func updateNavigatorBar() {
+		if let vm = viewModel {
+			if vm.isNewStudent {
+				self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+					barButtonSystemItem: .save,
+					target: self,
+					action: .saveButtonDidTap)
+
+				self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+					barButtonSystemItem: .cancel,
+					target: self,
+					action: .cancelButtonDidTap)
+			}
+//			} else {
+//				self.navigationItem.leftBarButtonItem = nil
+//			}
+		}
+	}
+
+	// MARK: - actions
+	@objc fileprivate func saveButtonDidTap(_ sender: UIBarButtonItem) {
+		//TODO: check validation
+		if let vm = viewModel {
+			vm.saveNew { [unowned self] (student) in
+				self.navigationController?.popViewController(animated: true)
+			}
+		} else {
+			self.dismiss(animated: true, completion: nil)
+			navigator.open(NavigationMap.urlString(withPatter:
+				"alert?title=Error&message=Student is not saved!") )
+		}
+	}
+
+	@objc fileprivate func cancelButtonDidTap(_ sender: UIBarButtonItem) {
+//		self.dismiss(animated: true, completion: nil)
+		navigationController?.popViewController(animated: true)
 	}
 
 	private func buildForm(_ viewModel: ViewModel) {
@@ -197,4 +236,12 @@ class EditStudentViewController: FormViewController {
 				})
 		}
 	}
+}
+
+extension Selector {
+	fileprivate static let saveButtonDidTap =
+		#selector(EditStudentViewController.saveButtonDidTap(_:))
+
+	fileprivate static let cancelButtonDidTap =
+		#selector(EditStudentViewController.cancelButtonDidTap(_:))
 }

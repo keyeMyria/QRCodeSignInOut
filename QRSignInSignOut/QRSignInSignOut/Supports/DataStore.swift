@@ -26,8 +26,16 @@ class DataManager {
 extension DataManager {
 	fileprivate func initializeStudentStore() {
 		stores["Student"] = DataStore<Student> { student in
-			student.save(Student(firstName: "Leo", lastName: "Lu"))
-			student.save(Student(firstName: "Lillian", lastName: "Lu"))
+			student.save(Student(firstName: "Leo", lastName: "Lu"), completion: { (res: Result<Student>) in
+				if let student = res.value {
+					student.createPin()
+				}
+			})
+			student.save(Student(firstName: "Lillian", lastName: "Lu"), completion: { (res: Result<Student>) in
+				if let student = res.value {
+					student.createPin()
+				}
+			})
 		}
 	}
 
@@ -65,6 +73,10 @@ class DataStore <T: ModelType> {
 		if record.id == nil {
 			record.makeID()
 			allData.append(record)
+		}
+
+		if let hander = completion {
+			hander(Result.success(record))
 		}
 		// existing records get saved automatially
 	}

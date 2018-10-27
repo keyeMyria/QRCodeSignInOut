@@ -12,7 +12,8 @@ extension EditStudentViewController {
 	class ViewModel {
 		private var student: Student
 
-
+		var isNewStudent: Bool { return student.isNew() }
+		
 		var first: String? {
 			get {
 				return student.firstName
@@ -112,5 +113,20 @@ extension EditStudentViewController {
 			self.student =  student
 		}
 
+		// save
+		func saveNew(_ completion: ((_ student: Student?) -> Void)?) {
+			DataManager.shared.student?.save(student, completion: { (res) in
+				if let student = res.value {
+					student.createPin()
+					NotificationCenter.default.post(name: .StudentDidAddNotification,
+													object: nil,
+													userInfo: [ Notification.Name.StudentDidAddNotification : student])
+				}
+
+				if let completion = completion {
+					completion(res.value)
+				}
+			})
+		}
 	}
 }

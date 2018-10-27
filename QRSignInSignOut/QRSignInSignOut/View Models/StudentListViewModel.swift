@@ -26,10 +26,21 @@ extension StudentListViewController {
 							 selector: .removeStudent,
 							 name: .deleteStudentNotification,
 							 object: nil)
+
+			NotificationCenter
+				.default
+				.addObserver(self,
+							 selector: .reloadStudents,
+							 name: .StudentDidAddNotification,
+							 object: nil)
 		}
 
 		deinit {
 			NotificationCenter.default.removeObserver(self)
+		}
+
+		@objc fileprivate func reloadStudents(_ notfication: Notification) {
+			students = DataManager.shared.student?.allItems() ?? [Student]()
 		}
 
 		private func student(at index: Int) -> Student? {
@@ -71,4 +82,5 @@ extension StudentListViewController {
 // MARK: - Selectors
 extension Selector {
 	fileprivate static let removeStudent = #selector(StudentListViewController.ViewModel.removeStudent(_:))
+	fileprivate static let reloadStudents = #selector(StudentListViewController.ViewModel.reloadStudents(_:))
 }

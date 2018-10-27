@@ -17,7 +17,7 @@ enum Sex: String, Codable {
 }
 
 
-protocol ModelType: AnyObject {
+public protocol ModelType: AnyObject {
 	var id: String? { get }
 	func makeID()
 }
@@ -95,7 +95,8 @@ class Student: Model {
 	var firstName: String
 	var lastName: String
 	var level: GradeLevel
-	var pinCode: String = ""
+//	var pinCode: String = ""
+	var pinCode: String?
 	var sex: Sex = .unknown
 	var contact = ParentContact()
 	var image: UIImage?
@@ -107,13 +108,15 @@ class Student: Model {
 		lastName = last
 		self.level = level
 		super.init()
-		createPin()
 	}
 
-	private func createPin() {
+	/// Only call this when adding new student
+	func createPin() {
 		pinCode = generateRandomNumber(4)
 	}
 
+	func isNew() -> Bool { return pinCode == nil }
+	
 	private func generateRandomNumber(_ numDigits: Int) -> String {
 		var ret = "";
 		for _ in 0..<numDigits {
@@ -160,4 +163,17 @@ extension Student: Hashable {
 extension Student: Equatable {}
 func ==(lhs: Student, rhs: Student) -> Bool {
 	return lhs.hashValue == rhs.hashValue
+}
+
+extension Student: CustomStringConvertible {
+	var description: String {
+		let ret = "id => \(self.id ?? "") \n"
+			+ "First Name => \(self.firstName) \n"
+			+ "Last Name => \(self.lastName) \n"
+			+ "Sex => \(self.sex.rawValue) \n"
+			+ "Level => \(self.level.rawValue) \n"
+			+ "Pin => \(self.pinCode ?? "") \n"
+		return ret
+	}
+
 }

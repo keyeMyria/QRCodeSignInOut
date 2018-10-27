@@ -14,15 +14,36 @@ class StudentListViewController: UITableViewController {
 
 	var viewModel = ViewModel()
 
-	override func viewDidLoad() {
+//	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//		NotificationCenter.default.addObserver(self, selector: #selector(reloadStudents(_:)), name: .StudentDidAddNotification, object: nil)
+//	}
+//
+//	required init?(coder aDecoder: NSCoder) {
+//		super.init(coder: aDecoder)
+//		NotificationCenter.default.addObserver(self, selector: #selector(reloadStudents(_:)), name: .StudentDidAddNotification, object: nil)
+//	}
+//
+//	deinit {
+//		NotificationCenter.default.removeObserver(self)
+//	}
+//
+//	private func reloadViewModel() {
+//		let students = DataManager.shared.student?.allItems() ?? [Student]()
+//		viewModel = ViewModel(students: students)
+//	}
 
+//	@objc private func reloadStudents(_ notification: Notification) {
+//		reloadViewModel()
+//	}
+
+	override func viewDidLoad() {
 		/// Selector syntax sugar is cool 👍
 		self.navigationItem.rightBarButtonItem?.action = .addButtonPressed
 		self.navigationItem.rightBarButtonItem?.target = self
+
 		let students = DataManager.shared.student?.allItems() ?? [Student]()
 		viewModel = ViewModel(students: students)
-
-
 	}
 
 	override func viewWillAppear(_ animated: Bool) {

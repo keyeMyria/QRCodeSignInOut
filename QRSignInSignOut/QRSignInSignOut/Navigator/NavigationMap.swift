@@ -47,7 +47,7 @@ struct NavigationMap {
 		navigator.register("http://<path:_>", self.webViewControllerFactory)
 		navigator.register("https://<path:_>", self.webViewControllerFactory)
 
-		navigator.handle("navigator://alert", self.alert(navigator: navigator))
+		navigator.handle(urlString(withPatter: "alert"), self.alert(navigator: navigator))
 		//    navigator.handle("navigator://<path:_>") { (url, values, context) -> Bool in
 		//      // No navigator match, do analytics or fallback function here
 		//      print("[Navigator] NavigationMap.\(#function):\(#line) - global fallback function is called")
