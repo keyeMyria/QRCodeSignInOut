@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		780DADD5216691D700078CB6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADD4216691D700078CB6 /* Notifications.swift */; };
+		780DADD82166B21800078CB6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADD72166B21800078CB6 /* DataStore.swift */; };
+		780DADDA216937E100078CB6 /* EditStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADD9216937E100078CB6 /* EditStudentViewController.swift */; };
+		780DADDC2169384300078CB6 /* EditStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DADDB2169384300078CB6 /* EditStudentViewModel.swift */; };
+		780DAE022171196D00078CB6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DAE012171196D00078CB6 /* Result.swift */; };
+		7848FB6C215C30F10076FD8A /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848FB6B215C30F10076FD8A /* StudentListViewController.swift */; };
+		7848FB6F215C343F0076FD8A /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848FB6E215C343F0076FD8A /* StudentListViewModel.swift */; };
+		7848FB72215C35400076FD8A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848FB71215C35400076FD8A /* Student.swift */; };
+		7848FB75215C40A30076FD8A /* StudentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848FB74215C40A30076FD8A /* StudentListTableViewCell.swift */; };
+		786C3FDA2156BCC300D63556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C3FD92156BCC300D63556 /* AppDelegate.swift */; };
+		786C3FDC2156BCC300D63556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C3FDB2156BCC300D63556 /* ViewController.swift */; };
+		786C3FDF2156BCC300D63556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786C3FDD2156BCC300D63556 /* Main.storyboard */; };
+		786C3FE12156BCC400D63556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786C3FE02156BCC400D63556 /* Assets.xcassets */; };
+		786C3FE42156BCC400D63556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786C3FE22156BCC400D63556 /* LaunchScreen.storyboard */; };
+		786C3FEF2156BCC500D63556 /* QRSignInSignOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C3FEE2156BCC500D63556 /* QRSignInSignOutTests.swift */; };
+		786C3FFF2156C06500D63556 /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C3FFE2156C06500D63556 /* NavigationMap.swift */; };
+		786C40022156C0EC00D63556 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C40012156C0EC00D63556 /* MainMenuController.swift */; };
+		973A96DCC4FA77FF38CF473F /* Pods_QRSignInSignOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846946CD3EA6C28AE5F7C1BB /* Pods_QRSignInSignOut.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		786C3FEB2156BCC500D63556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 786C3FCE2156BCC300D63556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 786C3FD52156BCC300D63556;
+			remoteInfo = QRSignInSignOut;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13C4C3D540479A17DE854C92 /* Pods-QRSignInSignOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRSignInSignOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut.release.xcconfig"; sourceTree = "<group>"; };
+		780DADD4216691D700078CB6 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		780DADD72166B21800078CB6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		780DADD9216937E100078CB6 /* EditStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentViewController.swift; sourceTree = "<group>"; };
+		780DADDB2169384300078CB6 /* EditStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentViewModel.swift; sourceTree = "<group>"; };
+		780DAE012171196D00078CB6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7848FB6B215C30F10076FD8A /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		7848FB6E215C343F0076FD8A /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
+		7848FB71215C35400076FD8A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		7848FB74215C40A30076FD8A /* StudentListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListTableViewCell.swift; sourceTree = "<group>"; };
+		786C3FD62156BCC300D63556 /* QRSignInSignOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRSignInSignOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		786C3FD92156BCC300D63556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		786C3FDB2156BCC300D63556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		786C3FDE2156BCC300D63556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		786C3FE02156BCC400D63556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		786C3FE32156BCC400D63556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		786C3FE52156BCC500D63556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		786C3FEA2156BCC500D63556 /* QRSignInSignOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRSignInSignOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		786C3FEE2156BCC500D63556 /* QRSignInSignOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSignInSignOutTests.swift; sourceTree = "<group>"; };
+		786C3FF02156BCC500D63556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		786C3FFE2156C06500D63556 /* NavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
+		786C40012156C0EC00D63556 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		846946CD3EA6C28AE5F7C1BB /* Pods_QRSignInSignOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRSignInSignOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33E2335B371F4AE925D670D /* Pods-QRSignInSignOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRSignInSignOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		786C3FD32156BCC300D63556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				973A96DCC4FA77FF38CF473F /* Pods_QRSignInSignOut.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		786C3FE72156BCC500D63556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		367453AD70CC792E11BDE9C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D33E2335B371F4AE925D670D /* Pods-QRSignInSignOut.debug.xcconfig */,
+				13C4C3D540479A17DE854C92 /* Pods-QRSignInSignOut.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		780DADD3216691AE00078CB6 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				780DADD4216691D700078CB6 /* Notifications.swift */,
+				780DADD72166B21800078CB6 /* DataStore.swift */,
+				780DAE012171196D00078CB6 /* Result.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		780DAE032173A4FA00078CB6 /* Custom Eureka Row and Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Eureka Row and Cell";
+			sourceTree = "<group>";
+		};
+		7848FB6D215C34110076FD8A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				7848FB6E215C343F0076FD8A /* StudentListViewModel.swift */,
+				780DADDB2169384300078CB6 /* EditStudentViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		7848FB70215C352C0076FD8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7848FB71215C35400076FD8A /* Student.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7848FB73215C40910076FD8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7848FB74215C40A30076FD8A /* StudentListTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		786C3FCD2156BCC300D63556 = {
+			isa = PBXGroup;
+			children = (
+				786C3FD82156BCC300D63556 /* QRSignInSignOut */,
+				786C3FED2156BCC500D63556 /* QRSignInSignOutTests */,
+				786C3FD72156BCC300D63556 /* Products */,
+				367453AD70CC792E11BDE9C9 /* Pods */,
+				A2A63F4308F6CDEBCC0B59D3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		786C3FD72156BCC300D63556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				786C3FD62156BCC300D63556 /* QRSignInSignOut.app */,
+				786C3FEA2156BCC500D63556 /* QRSignInSignOutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		786C3FD82156BCC300D63556 /* QRSignInSignOut */ = {
+			isa = PBXGroup;
+			children = (
+				780DAE032173A4FA00078CB6 /* Custom Eureka Row and Cell */,
+				780DADD3216691AE00078CB6 /* Supports */,
+				7848FB73215C40910076FD8A /* Views */,
+				7848FB70215C352C0076FD8A /* Model */,
+				7848FB6D215C34110076FD8A /* View Models */,
+				786C40002156C0C400D63556 /* ViewControllers */,
+				786C3FFD2156C04C00D63556 /* Navigator */,
+				786C3FD92156BCC300D63556 /* AppDelegate.swift */,
+				786C3FDB2156BCC300D63556 /* ViewController.swift */,
+				786C3FDD2156BCC300D63556 /* Main.storyboard */,
+				786C3FE02156BCC400D63556 /* Assets.xcassets */,
+				786C3FE22156BCC400D63556 /* LaunchScreen.storyboard */,
+				786C3FE52156BCC500D63556 /* Info.plist */,
+			);
+			path = QRSignInSignOut;
+			sourceTree = "<group>";
+		};
+		786C3FED2156BCC500D63556 /* QRSignInSignOutTests */ = {
+			isa = PBXGroup;
+			children = (
+				786C3FEE2156BCC500D63556 /* QRSignInSignOutTests.swift */,
+				786C3FF02156BCC500D63556 /* Info.plist */,
+			);
+			path = QRSignInSignOutTests;
+			sourceTree = "<group>";
+		};
+		786C3FFD2156C04C00D63556 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				786C3FFE2156C06500D63556 /* NavigationMap.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		786C40002156C0C400D63556 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				786C40012156C0EC00D63556 /* MainMenuController.swift */,
+				7848FB6B215C30F10076FD8A /* StudentListViewController.swift */,
+				780DADD9216937E100078CB6 /* EditStudentViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2A63F4308F6CDEBCC0B59D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846946CD3EA6C28AE5F7C1BB /* Pods_QRSignInSignOut.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		786C3FD52156BCC300D63556 /* QRSignInSignOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 786C3FF32156BCC500D63556 /* Build configuration list for PBXNativeTarget "QRSignInSignOut" */;
+			buildPhases = (
+				8B84E709ED8AB78A06D89986 /* [CP] Check Pods Manifest.lock */,
+				786C3FD22156BCC300D63556 /* Sources */,
+				786C3FD32156BCC300D63556 /* Frameworks */,
+				786C3FD42156BCC300D63556 /* Resources */,
+				983920B65175C435D6469CFC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRSignInSignOut;
+			productName = QRSignInSignOut;
+			productReference = 786C3FD62156BCC300D63556 /* QRSignInSignOut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		786C3FE92156BCC500D63556 /* QRSignInSignOutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 786C3FF62156BCC500D63556 /* Build configuration list for PBXNativeTarget "QRSignInSignOutTests" */;
+			buildPhases = (
+				786C3FE62156BCC500D63556 /* Sources */,
+				786C3FE72156BCC500D63556 /* Frameworks */,
+				786C3FE82156BCC500D63556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				786C3FEC2156BCC500D63556 /* PBXTargetDependency */,
+			);
+			name = QRSignInSignOutTests;
+			productName = QRSignInSignOutTests;
+			productReference = 786C3FEA2156BCC500D63556 /* QRSignInSignOutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		786C3FCE2156BCC300D63556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Kun Lu";
+				TargetAttributes = {
+					786C3FD52156BCC300D63556 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					786C3FE92156BCC500D63556 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 786C3FD52156BCC300D63556;
+					};
+				};
+			};
+			buildConfigurationList = 786C3FD12156BCC300D63556 /* Build configuration list for PBXProject "QRSignInSignOut" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 786C3FCD2156BCC300D63556;
+			productRefGroup = 786C3FD72156BCC300D63556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				786C3FD52156BCC300D63556 /* QRSignInSignOut */,
+				786C3FE92156BCC500D63556 /* QRSignInSignOutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		786C3FD42156BCC300D63556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786C3FE42156BCC400D63556 /* LaunchScreen.storyboard in Resources */,
+				786C3FE12156BCC400D63556 /* Assets.xcassets in Resources */,
+				786C3FDF2156BCC300D63556 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		786C3FE82156BCC500D63556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B84E709ED8AB78A06D89986 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QRSignInSignOut-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		983920B65175C435D6469CFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageRow/ImageRow.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageRow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLNavigator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRSignInSignOut/Pods-QRSignInSignOut-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		786C3FD22156BCC300D63556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780DADDA216937E100078CB6 /* EditStudentViewController.swift in Sources */,
+				780DAE022171196D00078CB6 /* Result.swift in Sources */,
+				780DADD5216691D700078CB6 /* Notifications.swift in Sources */,
+				7848FB6C215C30F10076FD8A /* StudentListViewController.swift in Sources */,
+				786C3FDC2156BCC300D63556 /* ViewController.swift in Sources */,
+				780DADD82166B21800078CB6 /* DataStore.swift in Sources */,
+				7848FB6F215C343F0076FD8A /* StudentListViewModel.swift in Sources */,
+				786C40022156C0EC00D63556 /* MainMenuController.swift in Sources */,
+				786C3FDA2156BCC300D63556 /* AppDelegate.swift in Sources */,
+				7848FB72215C35400076FD8A /* Student.swift in Sources */,
+				786C3FFF2156C06500D63556 /* NavigationMap.swift in Sources */,
+				780DADDC2169384300078CB6 /* EditStudentViewModel.swift in Sources */,
+				7848FB75215C40A30076FD8A /* StudentListTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		786C3FE62156BCC500D63556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786C3FEF2156BCC500D63556 /* QRSignInSignOutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		786C3FEC2156BCC500D63556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 786C3FD52156BCC300D63556 /* QRSignInSignOut */;
+			targetProxy = 786C3FEB2156BCC500D63556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		786C3FDD2156BCC300D63556 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				786C3FDE2156BCC300D63556 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		786C3FE22156BCC400D63556 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				786C3FE32156BCC400D63556 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		786C3FF12156BCC500D63556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		786C3FF22156BCC500D63556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		786C3FF42156BCC500D63556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33E2335B371F4AE925D670D /* Pods-QRSignInSignOut.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YEDZDJ5SPW;
+				INFOPLIST_FILE = QRSignInSignOut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunlu.QRSignInSignOut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		786C3FF52156BCC500D63556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C4C3D540479A17DE854C92 /* Pods-QRSignInSignOut.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YEDZDJ5SPW;
+				INFOPLIST_FILE = QRSignInSignOut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunlu.QRSignInSignOut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		786C3FF72156BCC500D63556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YEDZDJ5SPW;
+				INFOPLIST_FILE = QRSignInSignOutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunlu.QRSignInSignOutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QRSignInSignOut.app/QRSignInSignOut";
+			};
+			name = Debug;
+		};
+		786C3FF82156BCC500D63556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YEDZDJ5SPW;
+				INFOPLIST_FILE = QRSignInSignOutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunlu.QRSignInSignOutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QRSignInSignOut.app/QRSignInSignOut";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		786C3FD12156BCC300D63556 /* Build configuration list for PBXProject "QRSignInSignOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				786C3FF12156BCC500D63556 /* Debug */,
+				786C3FF22156BCC500D63556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		786C3FF32156BCC500D63556 /* Build configuration list for PBXNativeTarget "QRSignInSignOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				786C3FF42156BCC500D63556 /* Debug */,
+				786C3FF52156BCC500D63556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		786C3FF62156BCC500D63556 /* Build configuration list for PBXNativeTarget "QRSignInSignOutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				786C3FF72156BCC500D63556 /* Debug */,
+				786C3FF82156BCC500D63556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 786C3FCE2156BCC300D63556 /* Project object */;
+}
